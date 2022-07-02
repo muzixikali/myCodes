@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "SqList.h"
-
+#include <stdlib.h>
 
 Status InitList(SqList *L){
     //为数组data分配空间
