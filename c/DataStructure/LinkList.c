@@ -35,7 +35,12 @@ Status ClearList(LinkList* L){
 }
 
 Status DestoryList(LinkList* L){
-    free(*L);
+    Node* p=(*L);
+    while(p){
+        Node* q=p;
+        p=p->next;
+        free(q);
+    }
 }
 
 Status GetElem(LinkList L,int i,ElemType* e){
