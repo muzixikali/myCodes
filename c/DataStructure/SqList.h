@@ -1,3 +1,5 @@
+#pragma once  //防止头文件重复包含
+
 /*定义状态码*/
 typedef int Status;
 //内存溢出
@@ -40,7 +42,7 @@ BOOL IsListEmpty(SqList L);
 /*返回顺序表的长度*/
 /*输入:顺序表L*/
 /*输出:顺序表的长度length*/
-int ListLength(L);
+int ListLength(SqList L);
 
 /*置空顺序表*/
 /*输入:顺序表L的地址*/
