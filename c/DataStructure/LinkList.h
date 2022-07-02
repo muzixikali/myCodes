@@ -1,3 +1,5 @@
+#pragma once //防止头文件重复包含
+
 /*定义状态码*/
 typedef int Status;
 //内存溢出
@@ -22,7 +24,6 @@ typedef struct Node{
     ElemType data;   //数据域
     struct Node* next;   //指针域
 } Node,*LinkList;
-
 
 
 /*初始化单链表*/
