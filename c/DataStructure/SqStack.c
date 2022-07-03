@@ -28,6 +28,7 @@ Status ClearStack(SqStack *S){
 
 Status DestoryStack(SqStack *S){
     free(S->data);
+    return OK;
 }
 
 Status Pop(SqStack* S, ElemType *e){

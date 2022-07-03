@@ -43,12 +43,12 @@ BOOL IsStackEmpty(SqStack S);
 int StackLength(SqStack S);
 
 /*置空顺序栈*/
-/*输入:顺序栈S(数组名)*/
+/*输入:顺序栈S的地址*/
 /*输出:顺序栈是否置空成功;空的顺序栈S*/
 Status ClearStack(SqStack *S);
 
 /*销毁顺序栈*/
-/*输入:顺序栈S(数组名)*/
+/*输入:顺序栈S的地址*/
 /*输出:顺序栈是否销毁成功;未初始化的顺序栈S*/
 Status DestoryStack(SqStack *S);
 
