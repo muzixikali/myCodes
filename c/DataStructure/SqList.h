@@ -1,5 +1,3 @@
-#pragma once  //防止头文件重复包含
-
 /*定义状态码*/
 typedef int Status;
 //内存溢出
