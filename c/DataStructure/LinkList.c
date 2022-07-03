@@ -41,6 +41,7 @@ Status DestoryList(LinkList* L){
         p=p->next;
         free(q);
     }
+    return OK;
 }
 
 Status GetElem(LinkList L,int i,ElemType* e){
