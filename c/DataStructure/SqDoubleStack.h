@@ -2,12 +2,10 @@
 typedef int Status;
 //内存溢出
 #define OVERFLOW 0
-//数据未查找到
-#define NOTFOUND -1
 //栈空错误
-#define NULLERROR -2
+#define NULLERROR -1
 //编号错误
-#define INPUTERROR -3;
+#define INPUTERROR -2
 //操作成功
 #define OK 1
 
