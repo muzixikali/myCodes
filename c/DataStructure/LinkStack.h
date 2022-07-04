@@ -4,7 +4,7 @@ typedef int Status;
 #define OVERFLOW 0
 //数据未查找到
 #define NOTFOUND -1
-//索引出错
+//栈空错误
 #define NULLERROR -2
 //操作成功    
 #define OK 1 
