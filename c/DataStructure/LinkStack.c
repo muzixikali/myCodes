@@ -21,6 +21,7 @@ BOOL IsStackEmpty(LinkStack S){
 
 Status ClearStack(LinkStack* S){
     S->top=NULL;
+    S->count=0;
     return OK;
 }
 
