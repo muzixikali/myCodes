@@ -2,35 +2,30 @@
 #include<stdlib.h>
 
 Status InitStack(LinkStack* S){
-    //无头结点;第一个结点即为栈顶top
-    (*S)=NULL;
+    //栈顶结点为空
+    S->top=NULL;
+    S->count=0;
     return OK;
 }
 
 int StackLength(LinkStack S){
-    Node* p=S;
-    int length=0;
-    while(p){
-        p=p->next;
-        ++length;
-    }
-    return length;
+   return S.count;
 }
 
 BOOL IsStackEmpty(LinkStack S){
-    if(S==NULL){
+    if(S.top==NULL){
         return TRUE;
     }
     return FALSE;
 }
 
 Status ClearStack(LinkStack* S){
-    (*S)=NULL;
+    S->top=NULL;
     return OK;
 }
 
 Status DestoryStack(LinkStack* S){
-    Node* p=(*S);
+    Node* p=S->top;
     while(p){
         Node* q=p;
         p=p->next;
@@ -43,8 +38,8 @@ Status Push(LinkStack* S,ElemType e){
     Node* newNode=(Node*)malloc(sizeof(Node));
     if(newNode){
         newNode->data=e;
-        newNode->next=(*S);
-        (*S)=newNode;
+        newNode->next=S->top;
+        S->top=newNode;
         return OK;
     }
     return OVERFLOW;
@@ -56,9 +51,9 @@ Status Pop(LinkStack* S,ElemType* e){
         return NULLERROR;
     }
     //
-    *e=(*S)->data;
-    Node* p=(*S);
-    (*S)=(*S)->next;
+    *e=S->top->data;
+    Node* p=S->top;
+    S->top=S->top->next;
     free(p);
     return OK;
 }
