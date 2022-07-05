@@ -40,6 +40,7 @@ Status Push(LinkStack* S,ElemType e){
         newNode->data=e;
         newNode->next=S->top;
         S->top=newNode;
+        S->count++;
         return OK;
     }
     return OVERFLOW;
@@ -54,6 +55,7 @@ Status Pop(LinkStack* S,ElemType* e){
     *e=S->top->data;
     Node* p=S->top;
     S->top=S->top->next;
+    S->count--;
     free(p);
     return OK;
 }
