@@ -41,6 +41,8 @@ int IndexOf(String P,String S,int begin){
 }
 
 //生成字符串S的next数组
+//next值即每个字符前面子串的最大相同前后缀个数+1
+//代表着正式算法中j回溯的位置
 void GetNext(String S,int* next){
     int len=strlen(S);
     int i,j;
@@ -48,14 +50,15 @@ void GetNext(String S,int* next){
     j=0;
     next[1]=0;  //第一个字符
     while(i<len){
+        //拿S的第i+1个字符与上一个字符的最长相同前后缀前缀部分的下一个字符比
         if( j==0 || S[i]==S[j]){
             ++i;
             ++j;
-            //第i个字符
+            //第i个字符的next值
             next[i]=j;
         }
         else{
-            //j回溯
+            //j保存··
             j=next[j];
         }
     }
